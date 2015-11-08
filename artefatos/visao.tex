@@ -8,6 +8,8 @@
       \hline
       \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Vesão} & \multicolumn{1}{c|}{Descrição}     & \multicolumn{1}{c|}{Autor} \\ \hline
       06/11/2015                & 0.1                         & Incluído posicionamento do projeto & Eduardo Vital       \\ \hline
+      06/11/2015                & 0.2                         & Incluído informação dos usuários e envolvidos & Nicolas  Oliveira
+        \\ \hline
     \end{tabular}
     \caption{Descrição do Problema}
   \end{table}
@@ -25,7 +27,7 @@
 
       \begin{table}[H]
         \centering
-        \begin{tabular}{|>{\columncolor[HTML]{C0C0C0}}p{0.25\textwidth}|p{0.75\textwidth}|}
+        \begin{tabular}{|>{\columncolor[HTML]{C0C0C0}}p{0.26\textwidth}|p{0.65\textwidth}|}
           \hline
           O problema de         &   falta de controle do processo de desenvolvimento \\ \hline
           afeta                 &   toda a equipe de desenvolvimento                 \\ \hline
@@ -60,22 +62,70 @@
 
       \begin{table}[H]
         \centering
-        \begin{tabular}{|>{\columncolor[HTML]{C0C0C0}}p{0.25\textwidth}|p{0.75\textwidth}|}
+        \begin{tabular}{|>{\columncolor[HTML]{C0C0C0}}p{0.20\textwidth}|p{0.71\textwidth}|}
           \hline
-          Para            &   a inSoft                                                \\ \hline
+          Para            &   a inSoft                                                 \\ \hline
           Que             &   necessita de um sistema que a auxilie no melhoramento de seu processo de desenvolvimento
                                                                                        \\ \hline
           O SGi           &   é um sistema gerenciador de projetos de desenvolvimento  \\ \hline
           Que             &   permite o monitoramento das atividades de desenvolvimento de cada projeto da empresa, bem como da equipe de desenvolvimento envolvida em cada projeto                \\ \hline
-          Ao contrário do &   Trello \\ \hline
-          Nosso produto   &   permite uma melhor visualização das informações de cada membro, e das atividades que cada um desempenha, possibilitando maior controle sobre a equipe.                \\ \hline
+          Ao contrário do &   Trello                                                   \\ \hline
+          Nosso produto   &   permite uma melhor visualização das informações de cada membro, e das atividades que cada um desempenha, possibilitando maior controle sobre a equipe.               \\ \hline
         \end{tabular}
         \caption{Posição do SGi}
       \end{table}
 
   \section{Descrições dos Envolvidos e dos Usuários}
     \subsection{Resumo dos Envolvidos}
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.41\textwidth}|}
+          \hline
+          \rowcolor[HTML]{C0C0C0}
+          \multicolumn{1}{c}{Nome} & \multicolumn{1}{|c|}{Descrição} & \multicolumn{1}{|c|}{Responsabilidade} \\ \hline
+            Diretor de Gestão de Pessoas & Diretor a qual fica a cargo de gerenciar os recursos humanos da InSoft.
+                                         & Assegura que todos os contratados pela InSoft estarão com seus dados sobre horários disponíveis e habilidades específicas. \\ \hline
+            Diretor de Desenvolvimento   & Diretor a qual fica a cargo a parte de criação de protótipos e gestão de desenvolvedores para certo projeto. & Assegura que todos os envolvidos em tal projeto estão aptos a tal sistema que será feito e se possuem tempo para trabalhar no desenvolvimento. \\ \hline
+            Desenvolvedor                & Qualquer funcionário da InSoft destinado a algum projeto de desenvolvimento de software.                  & Assegura que todos seus dados estão corretos e de atualizar conforme a melhora em seu quadro de habilidades e horários. \\ \hline
+            Negociador                   & Funcionário da InSoft responsável pelo acordo com o cliente de um projeto.
+                                         & Assegura que todas as especificações iniciais estejam dentro de uma lista de habilidades que podem ser feitas pelos desenvolvedores da InSoft. \\ \hline
+            \emph{Scrum Master}          & Funcionário da InSoft responsável por um time de desenvolvimento e verificar seu andamento em relação as atividades à serem feitas.
+                                         & Assegura que o time está atendendo os prazos estipulados para cada atividade proposta no cronograma do Projeto. \\ \hline
+        \end{tabular}
+        \caption{Resumo dos envolvidos}
+      \end{table}
+
     \subsection{Resumo dos Usuários}
+
+      \begin{table}[H]
+        \centering
+        \begin{tabular}{|p{0.20\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|p{0.23\textwidth}|}
+          \hline
+          \rowcolor[HTML]{C0C0C0}
+          \multicolumn{1}{c}{Nome} & \multicolumn{1}{|c|}{Descrição} & \multicolumn{1}{|c|}{Responsabilidade} & \multicolumn{1}{|c|}{Envolvido} \\ \hline
+            Desenvolvedores
+              & Qualquer funcionário da Insoft que possui conhecimentos de alguma linguagem e com horário disponível para trabalhar em algum projeto, ou já trabalha em algum projeto.
+              & Analisar se todas suas informações estão corretas e atualizar suas informações relacionadas a horário e quadro de habilidades caso seja necessário.
+              & Atualização dos registros, mediante permissão. \\ \hline
+            \emph{Scrum Master}
+              & Tem o papel de técnico do time e assim orientar o time na realização de seus trabalhos assim os auxiliando a seguir as práticas ágeis adotadas pela InSoft.
+              & Verificar os horários dos desenvolvedores de certo projeto.
+              & Envolvido na parte de manter maior controle da equipe a qual está destinado a ajudar. \\ \hline
+            Diretor de Desenvolvimento
+              & Tem o papel de liderança em torno de todas as equipes de desenvolvimento da InSoft.
+              & Designa funcionários da InSoft para atuarem como desenvolvedores de acordo com suas competências e horários disponíveis;
+                Atualiza os horários dos funcionários após serem realocados para algum projeto.
+              & Envolvido com a seleção e distribuição de desenvolvedores para projetos seguindo os horários e habilidades de cada funcionário. \\ \hline
+            Diretor de Gestão de Pessoas
+              & Diretor a qual fica a cargo de gerenciar os recursos humanos da InSoft.
+              & Adicionar novos funcionários no sistema atendendo suas habilidades e horário;
+                Retirar registro dos funcionários que foram desligados da empresa.
+              & Envolvido com a área de seleção e cadastro de cada novo funcionário da InSoft, sendo também responsável pela área de desligamento e remoção de cadastros. \\ \hline
+        \end{tabular}
+        \caption{Resumo dos usuários}
+      \end{table}
+
     \subsection{Ambiente do Usuário}
     \subsection{Resumo das Principais Necessidades dos Envolvidos ou dos Usuários}
     \subsection{Alternativas e Concorrência}
