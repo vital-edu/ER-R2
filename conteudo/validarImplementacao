@@ -1,4 +1,4 @@
-\chapter{Validar Implementação}
+\section{Validar Implementação}
 
 Após a criação da build, resultado da atividade de Gerar Build, foi validado com o cliente se os casos de uso desenvolvidos estavam de acordo com suas necessidades e expectativas. Primeiramente obtivemos o retorno de que, apesar dos casos de uso terem sido desenvolvidos de maneira a alcançar as metas impostas, foi validado que deveriamos evoluir estes casos de uso a ponto que atendesse completamente suas expectativas e necessiadades.
 
