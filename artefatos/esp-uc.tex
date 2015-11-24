@@ -80,9 +80,9 @@ O caso de uso se inicia quando o diretor de desenvolvimento se encontra na tela 
 \begin{enumerate}
   \item O diretor de desenvolvimento seleciona a opção de editar projeto
   \item O sistema carrega a tela de edição do projeto com todas as informações do projeto.
-  \item Dentro da tela de edição do projeto, o diretor de desenvolvimento edita os campos de informação que deseja alterar.
+  \item Dentro da tela de edição do projeto, o diretor de desenvolvimento edita os campos de informação que deseja alterar.[RN7]
   \item O diretor de desenvolvimento aciona a opção de salvar as informações
-  \item O sistema retorna ao diretor de desenvolvimento que as informações foram alteradas com sucesso.
+  \item O sistema retorna ao diretor de desenvolvimento que as informações foram alteradas com sucesso.[RN8]
   \item O diretor de desenvolvimento é encaminhado pelo sistema à tela de visualização do projeto.
   \item O caso de uso é encerrado.
 \end{enumerate}
@@ -162,7 +162,7 @@ O caso de uso começa quando o diretor de desenvolvimento acessa a tela de sele�
 \begin{enumerate}
   \item O diretor de desenvolvimento seleciona a opção de arquivar o projeto. [RN4]
   \item O sistema retorna uma mensagem perguntando ao diretor de desenvolvimento se ele deseja concluir a operação.
-  \item O sistema retorna uma mensagem de confirmação informando que o arquivamento foi realizado com sucesso.
+  \item O sistema retorna uma mensagem de confirmação informando que o arquivamento foi realizado com sucesso.[RN8]
   \item O diretor de desenvolvimento é redirecionado a tela de seleção de projetos.
   \item O caso de uso é encerrado
 \end{enumerate}
@@ -173,10 +173,10 @@ O caso de uso começa quando o diretor de desenvolvimento acessa a tela de sele�
 O caso de uso começa quando o Diretor de Desenvolvimento acessa a tela de seleção de projetos.
 
 \begin{enumerate}
-  \item O usuário seleciona a opção visualizar projetos arquivados.
+  \item O usuário seleciona a opção visualizar projetos arquivados. [RN10]
   \item O sistema redireciona o usuário para a tela de projetos arquivados [RN5]
   \item O usuário seleciona um projeto a ser desarquivado e clica em desarquivar.
-  \item O sistema retorna a informação de que o projeto foi desarquivado com sucesso.
+  \item O sistema retorna a informação de que o projeto foi desarquivado com sucesso.[RN8]
   \item O usuário é redirecionado para a tela de seleção de projetos.
   \item O projeto desarquivado é listado junto com os outros projetos na tela.
   \item O caso de uso é encerrado.
@@ -205,9 +205,9 @@ O caso de uso se inicia quando um usuário clica para criar uma tarefa em algum 
   \item O usuário escolhe qual dos projetos o qual ele irá criar uma tarefa.
   \item O usuário aciona o botão “adicionar uma tarefa” na tela “Tarefas”.
   \item O usuário é direcionado para a página de criação da tarefa.
-  \item O usuário preenche as informações necessárias sobre tal projeto
+  \item O usuário preenche as informações necessárias sobre a tarefa [RN3]
   \item O sistema adiciona tal tarefa no banco de dados relacionando com o projeto proposto.
-  \item A tela deve ser redirecionada para os quadros do projeto com a atividade recém criada na parte “to do” (para fazer).
+  \item A tela deve ser redirecionada para os quadros do projeto com a atividade recém criada na parte ``to do'' (para fazer).
   \item O caso de uso é encerrado.
 \end{enumerate}
 
@@ -258,10 +258,10 @@ O caso de uso se inicia quando o diretor de desenvolvimento se encontra na tela 
 
 \begin{enumerate}
   \item O desenvolvedor seleciona a opção de editar a tarefa
-  \item O sistema carrega a tela de edição da tarefa com todas as informações da tarefa.
-  \item Dentro da tela de edição da tarefa, o desenvolvedor edita os campos de informação que deseja alterar
+  \item O sistema carrega a tela de edição da tarefa com todas as informações da tarefa. [RN3]
+  \item Dentro da tela de edição da tarefa, o desenvolvedor edita os campos de informação que deseja alterar. [RN3]
   \item O desenvolvedor aciona a opção de salvar as informações
-  \item O sistema retorna ao desenvolvedor que as informações foram alteradas com sucesso.
+  \item O sistema retorna ao desenvolvedor que as informações foram alteradas com sucesso. [RN8]
   \item O diretor de desenvolvimento é encaminhado pelo sistema à tela de visualização da tarefa.
   \item O caso de uso é encerrado.
 \end{enumerate}
@@ -306,8 +306,8 @@ O objetivo deste caso de uso é permitir ao usuário visualizar as informações
 O caso de uso começa quando o usuário visualiza o quadro de tarefas de um projeto
 
 \begin{enumerate}
-  \item O usuário seleciona uma das tarefas existentes no quadro de tarefas.
-  \item O sistema exibe as informações da tarefa (RN )
+  \item O usuário seleciona uma das tarefas existentes no quadro de tarefas. [RN2]
+  \item O sistema exibe as informações da tarefa [RN3]
   \item O caso de uso é encerrado
 \end{enumerate}
 
@@ -335,7 +335,7 @@ O caso de uso começa quando o diretor de desenvolvimento ou o scrum master,visu
 
 \begin{enumerate}
   \item O diretor de desenvolvimento, ou o scrum master seleciona a opção de arquivar tarefa.
-  \item O sistema informa ao diretor de desenvolvimento, ou ao scrum master do arquivamento.
+  \item O sistema retorna ao diretor de desenvolvimento, ou ao scrum master, uma mensagem informando que o arquivamento foi realizado com sucesso. [RN8]
   \item O diretor de desenvolvimento, ou o scrum master é redirecionado a tela de visualização do quadro de tarefas do projeto.
   \item A tarefa não estará mais listada no quadro de tarefas.
   \item O caso de uso é encerrado.
@@ -343,16 +343,16 @@ O caso de uso começa quando o diretor de desenvolvimento ou o scrum master,visu
 
 \subsection{Fluxos Alternativos}
 
-\subsubsection{Ativar Tarefa}
+\subsubsection{Desarquivar Tarefa}
 O caso de uso começa quando o diretor de desenvolvimento ou o scrum master,visualiza o quadro de tarefas de um projeto.
 
 \begin{enumerate}
-  \item O diretor de desenvolvimento ou o scrum master seleciona a opção de reativar tarefas no menu do sistema.
-  \item O diretor de desenvolvimento ou o scrum master seleciona uma tarefa a ser ativada.
-  \item O sistema informa do reativamento da tarefa.
-  \item O diretor de desenvolvimento ou o scrum master confirma o reativamento da tarefa
+  \item O diretor de desenvolvimento ou o scrum master seleciona a opção de visualização da tela de tarefas arquivadas. [RN9]
+  \item O diretor de desenvolvimento ou o scrum master seleciona uma tarefa a ser desarquivada.
+  \item O diretor de desenvolvimento ou o scrum master confirma o desarquivamento da tarefa
+  \item O sistema retorna mensagem informando que o desarquivamento da tarefa foi realizado com sucesso. [RN8]
   \item O diretor de desenvolvimento ou o scrum master é redirecionado a tela de visualização do quadro de tarefas.
-  \item O sistema exibe a tarefa reativada na tela de visualização do quadro de tarefas.
+  \item O sistema exibe a tarefa desarquivada na tela de visualização do quadro de tarefas.
   \item O caso de uso é encerrado
 \end{enumerate}
 
@@ -370,7 +370,7 @@ O quadro de tarefas do projeto deve exibir as tarefas organizadas de acordo com 
 
 \subsection{RN2}
 
-As tarefas arquivadas não serão exibidas no quadro de tarefas do projeto. Estarão disponíveis em uma tela separada. [RN5]
+As tarefas arquivadas não serão exibidas no quadro de tarefas do projeto. Estarão disponíveis em uma tela separada. [RN9][RN12]
 
 \subsection{RN3}
 
@@ -405,7 +405,7 @@ A opção de arquivar é apenas visível e acessível para o diretor de desenvol
 
 \subsection{RN5}
 
-A tela de projetos arquivados deve exibir todos os projetos ordenados pelo nome de forma ascendente, em uma lista.
+A tela de projetos arquivados deve exibir todos os projetos ordenados pelo nome de forma ascendente, em uma lista. [R12]
 
 \subsection{RN6}
 
@@ -452,3 +452,19 @@ Os projetos possuem as seguintes informações:
 \subsection{RN8}
 
 Sempre que uma operação não for concluída com sucesso, o sistema deve informar que a operação não foi efetuada com sucesso e retornar ao passo anterior.
+
+\subsection{RN9}
+
+A tela de tarefas arquivados deve exibir todas as tarefas ordenados pelo nome de forma ascendente, em uma lista. [RN11]
+
+\subsection{RN10}
+
+Os projetos arquivadas não serão exibidas na tela inicialdo sistema. Estarão disponíveis em uma tela separada. [RN5][RN11]
+
+\subsection{RN11}
+
+Os projetos arquivadas não podem ser editados·
+
+\subsection{RN12}
+
+As tarefas arquivadas não podem ser editados·
