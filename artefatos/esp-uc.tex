@@ -182,23 +182,6 @@ O caso de uso começa quando o Diretor de Desenvolvimento acessa a tela de sele�
   \item O caso de uso é encerrado.
 \end{enumerate}
 
-\subsubsection{Erro na operação de arquivamento}
-O caso de uso é iniciado após o passo 2 do fluxo principal quando o diretor de desenvolvimento confirma o arquivamento do projeto e por alguma razão a operação não é efetuada com sucesso
-
-\begin{enumerate}
-  \item O sistema retorna uma mensagem informando que não foi possível realizar a operação de arquivamento do projeto.
-  \item O fluxo retorna ao passo 1 do fluxo principal 
-\end{enumerate}
-
-\subsubsection{Erro na operação de desarquivamento}
-O caso de uso é iniciado após o passo 3 do fluxo alternativo “desarquivar projeto” quando o diretor de desenvolvimento confirma o desarquivamento do projeto e por alguma razão a operação não é efetuada com sucesso.
-
-\begin{enumerate}
-  \item O sistema retorna uma mensagem informando que não foi possível realizar a operação de desarquivamento do projeto.
-  \item O fluxo retorna ao passo 3 do fluxo principal.
-\end{enumerate}
-
-
 \section{UC05 -Criar Tarefa}
 O objetivo deste caso de uso é permitir ao desenvolvedor criar uma tarefa no sistema.
 
@@ -255,84 +238,121 @@ O caso de uso se inicia quando um usuário clica para criar uma tarefa em algum 
 \end{enumerate}
 
 
-\section{UC06 -}
-
-
-\subsection{Atores}
-
-\begin{enumerate}
-  \item
-\end{enumerate}
-
-\subsection{Pré-Condições}
-\begin{enumerate}
-  \item
-\end{enumerate}
-
-\subsection{Fluxo Principal}
-\begin{enumerate}
-  \item
-\end{enumerate}
-
-\subsection{Fluxos Alternativos}
-
-\subsubsection{--}
-
-\begin{enumerate}
-  \item
-\end{enumerate}
-
-\section{UC07 -}
-
+\section{UC06 - Editar Tarefa}
+O objetivo deste caso de uso é permitir ao desenvolvedor editar as tarefas dentro de um projeto de desenvolvimento para atualizar informações sobre a mesma.
 
 \subsection{Atores}
 
 \begin{enumerate}
-  \item
+  \item Usuário
 \end{enumerate}
 
 \subsection{Pré-Condições}
 \begin{enumerate}
-  \item
+  \item O diretor de desenvolvimento devera estar previamente logado no sistema.
+  \item Uma tarefa deve estar cadastrada na base de dados do sistema.
 \end{enumerate}
 
 \subsection{Fluxo Principal}
+O caso de uso se inicia quando o diretor de desenvolvimento se encontra na tela de visualização da tarefa.
+
 \begin{enumerate}
-  \item
+  \item O desenvolvedor seleciona a opção de editar a tarefa
+  \item O sistema carrega a tela de edição da tarefa com todas as informações da tarefa.
+  \item Dentro da tela de edição da tarefa, o desenvolvedor edita os campos de informação que deseja alterar
+  \item O desenvolvedor aciona a opção de salvar as informações
+  \item O sistema retorna ao desenvolvedor que as informações foram alteradas com sucesso.
+  \item O diretor de desenvolvimento é encaminhado pelo sistema à tela de visualização da tarefa.
+  \item O caso de uso é encerrado.
 \end{enumerate}
 
 \subsection{Fluxos Alternativos}
 
-\subsubsection{--}
+\subsubsection{Cancelar a edição da tarefa}
+Este fluxo se inicia quando o desenvolvedor aciona a opção “cancelar” dentro da tela de edição da tarefa.
 
 \begin{enumerate}
-  \item
+  \item O sistema retorna ao desenvolvedor uma caixa de diálogo perguntando se ele deseja fazer está ação de cancelamento ou não.
+  \item O desenvolvedor seleciona a opção “SIM” dentro da caixa de diálogo
+  \item O diretor de desenvolvimento é então encaminhado pelo sistema à tela de visualização da tarefa 
 \end{enumerate}
 
-\section{UC08 -}
+\subsubsection{Informações preenchidas incorretamente}
+Este fluxo se inicia quando no passo 4 do fluxo principal quando o sistema identificar que campos não foram preenchidos corretamente.
 
+\begin{enumerate}
+  \item O sistema retorna ao ddesenvolvedor a informação de que houve um erro na validação das informações fornecidas
+  \item O sistema exibe todos os erros de validação encontrados
+  \item O fluxo retorna ao passo 3 do fluxo principal
+\end{enumerate}
+
+
+\section{UC07 -Visualizar Tarefa}
+O objetivo deste caso de uso é permitir ao usuário visualizar as informações sobre determinada tarefa dentro de um projeto.
 
 \subsection{Atores}
 
 \begin{enumerate}
-  \item
+  \item Usuário
 \end{enumerate}
 
 \subsection{Pré-Condições}
 \begin{enumerate}
-  \item
+  \item O usuário deve estar logado no sistema.
+  \item Existir uma tarefa cadastrada dentro de um projeto na base de dados.
 \end{enumerate}
 
 \subsection{Fluxo Principal}
+O caso de uso começa quando o usuário visualiza o quadro de tarefas de um projeto
+
 \begin{enumerate}
-  \item
+  \item O usuário seleciona uma das tarefas existentes no quadro de tarefas.
+  \item O sistema exibe as informações da tarefa (RN )
+  \item O caso de uso é encerrado
+\end{enumerate}
+
+\subsection{Fluxos Alternativos}
+Não se aplica.
+
+\section{UC08 -Arquivar Tarefa}
+O objetivo deste caso de uso é permitir que o usuário arquive uma tarefa cadastrada
+
+\subsection{Atores}
+
+\begin{enumerate}
+  \item Scrum Master
+  \item Diretor de Desenvolvimento 
+\end{enumerate}
+
+\subsection{Pré-Condições}
+\begin{enumerate}
+  \item O Scrum Master, ou o Diretor de Desenvolvimento deve estar logado no sistema.
+  \item Existir uma tarefa cadastrada dentro de um projeto na base de dados.
+\end{enumerate}
+
+\subsection{Fluxo Principal}
+O caso de uso começa quando o diretor de desenvolvimento ou o scrum master,visualiza o quadro de tarefas de um projeto
+
+\begin{enumerate}
+  \item O diretor de desenvolvimento, ou o scrum master seleciona a opção de arquivar tarefa.
+  \item O sistema informa ao diretor de desenvolvimento, ou ao scrum master do arquivamento.
+  \item O diretor de desenvolvimento, ou o scrum master é redirecionado a tela de visualização do quadro de tarefas do projeto.
+  \item A tarefa não estará mais listada no quadro de tarefas.
+  \item O caso de uso é encerrado.
 \end{enumerate}
 
 \subsection{Fluxos Alternativos}
 
-\subsubsection{--}
+\subsubsection{Ativar Tarefa}
+O caso de uso começa quando o diretor de desenvolvimento ou o scrum master,visualiza o quadro de tarefas de um projeto.
 
 \begin{enumerate}
-  \item
+  \item O diretor de desenvolvimento ou o scrum master seleciona a opção de reativar tarefas no menu do sistema.
+  \item O diretor de desenvolvimento ou o scrum master seleciona uma tarefa a ser ativada.
+  \item O sistema informa do reativamento da tarefa.
+  \item O diretor de desenvolvimento ou o scrum master confirma o reativamento da tarefa
+  \item O diretor de desenvolvimento ou o scrum master é redirecionado a tela de visualização do quadro de tarefas.
+  \item O sistema exibe a tarefa reativada na tela de visualização do quadro de tarefas.
+  \item O caso de uso é encerrado
 \end{enumerate}
 
