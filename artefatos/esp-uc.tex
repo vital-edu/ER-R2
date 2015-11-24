@@ -1,5 +1,5 @@
 \chapter{Especificação de Caso de Uso}
-
+\label{sec:esp-req}
 
 \section{UC01 -Criar Projeto}
 
@@ -50,7 +50,7 @@ Este fluxo se inicia quando no passo 3 do fluxo principal não foram informados 
 \end{enumerate}
 
 \subsubsection{Projeto existente}
-Este fluxo se inicia quando no passo 3 do fluxo principal foram inseridas informações idênticas as de outro projeto já existente no sistema. 
+Este fluxo se inicia quando no passo 3 do fluxo principal foram inseridas informações idênticas as de outro projeto já existente no sistema.
 
 \begin{enumerate}
   \item O sistema retorna ao diretor de desenvolvimento a informação de que o projeto já existe no sistema.
@@ -104,7 +104,7 @@ Este fluxo se inicia quando no passo 4 do fluxo principal quando o sistema ident
 \begin{enumerate}
   \item O sistema retorna ao diretor de desenvolvimento a informação de que houve um erro na validação das informações fornecidas.
   \item O sistema exibe todos os erros de validação encontrados.
-  \item O fluxo retorna ao passo 3 do fluxo principal. 
+  \item O fluxo retorna ao passo 3 do fluxo principal.
 \end{enumerate}
 
 \section{UC03 - Visualizar Projeto}
@@ -113,13 +113,13 @@ Esse caso de uso descreve como qualquer usuário usa a aplicação para exibir a
 
 \subsection{Atores}
 \begin{enumerate}
-  \item Usuário 
+  \item Usuário
 \end{enumerate}
 \subsection{Pré-Condições}
 
 \begin{enumerate}
   \item O usuário deve estar logado.
-  \item Deve existir um projeto cadastrado na base de dados da aplicação. 
+  \item Deve existir um projeto cadastrado na base de dados da aplicação.
 \end{enumerate}
 
 \subsection{Fluxo Principal}
@@ -128,7 +128,7 @@ O caso de uso começa quando o usuário acessa a tela de seleção de projetos.
 \begin{enumerate}
   \item O usuário seleciona a opção de visualizar o quadro de tarefas de um projeto dentre os listados.
   \item O sistema retorna ao usuário o quadro de tarefas do projeto [RN1] [RN2].
-  \item O caso de uso é encerrado. 
+  \item O caso de uso é encerrado.
 \end{enumerate}
 
 \subsection{Fluxos Alternativos}
@@ -208,7 +208,7 @@ O caso de uso se inicia quando um usuário clica para criar uma tarefa em algum 
   \item O usuário preenche as informações necessárias sobre tal projeto
   \item O sistema adiciona tal tarefa no banco de dados relacionando com o projeto proposto.
   \item A tela deve ser redirecionada para os quadros do projeto com a atividade recém criada na parte “to do” (para fazer).
-  \item O caso de uso é encerrado. 
+  \item O caso de uso é encerrado.
 \end{enumerate}
 
 \subsection{Fluxos Alternativos}
@@ -274,7 +274,7 @@ Este fluxo se inicia quando o desenvolvedor aciona a opção “cancelar” dent
 \begin{enumerate}
   \item O sistema retorna ao desenvolvedor uma caixa de diálogo perguntando se ele deseja fazer está ação de cancelamento ou não.
   \item O desenvolvedor seleciona a opção “SIM” dentro da caixa de diálogo
-  \item O diretor de desenvolvimento é então encaminhado pelo sistema à tela de visualização da tarefa 
+  \item O diretor de desenvolvimento é então encaminhado pelo sistema à tela de visualização da tarefa
 \end{enumerate}
 
 \subsubsection{Informações preenchidas incorretamente}
@@ -321,7 +321,7 @@ O objetivo deste caso de uso é permitir que o usuário arquive uma tarefa cadas
 
 \begin{enumerate}
   \item Scrum Master
-  \item Diretor de Desenvolvimento 
+  \item Diretor de Desenvolvimento
 \end{enumerate}
 
 \subsection{Pré-Condições}
@@ -428,22 +428,22 @@ Os projetos possuem as seguintes informações:
     \item Tamanho mínimo: 1 caractere
     \item Tamanho máximo: 50 caracteres
   \end{enumerate}
-  \item Cliente 
+  \item Cliente
   \begin{enumerate}
     \item Formato: Texto
     \item Tamanho mínimo: 1 caractere
     \item Tamanho máximo: 50 caracteres
   \end{enumerate}
-  \item Data Inicial 
+  \item Data Inicial
   \begin{enumerate}
-    \item Formato: Data 
-    \item Não pode ser anterior a data inicial 
+    \item Formato: Data
+    \item Não pode ser anterior a data inicial
   \end{enumerate}
-  \item Imagem 
+  \item Imagem
   \begin{enumerate}
-    \item Formato: pnj, jpg 
+    \item Formato: pnj, jpg
   \end{enumerate}
-  \item Desenvolvedores 
+  \item Desenvolvedores
   \begin{enumerate}
     \item Múltipla escolha: Lista de desenvolvedores da InSoft cadastrados no sistema
   \end{enumerate}
@@ -452,4 +452,3 @@ Os projetos possuem as seguintes informações:
 \subsection{RN8}
 
 Sempre que uma operação não for concluída com sucesso, o sistema deve informar que a operação não foi efetuada com sucesso e retornar ao passo anterior.
-
