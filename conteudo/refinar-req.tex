@@ -1,0 +1,85 @@
+\chapter{Refinar Requisitos}
+\label{sec:refinar-req}
+
+A atividade de Refinar Requisitos tem como objetivo pegar o que foi acordado no documento de Visão (apendice \ref{secart-visao}) e então levantar requisitos mais próximos da equipe técnica. Dessa forma extraímos características e requisitos funcionai do sistema.
+
+Para levantar essas caracteristicas e requisitos funcionais, utilizamos todas as 3 técnicas de elicitação que decidimos usar inicialmente. Com brainstorm levantamos ideias gerais a respeito de funcionamentos internos e externos do sistema. Com analise competitiva, decidimos funcionalidades básicas que concorrentes possuem, que os clientes acham úteis, e seriam indispensáveis para nosso sistema. E com prototipação confirmamos se certas funcionalidades seriam realmente necessarias, ou se houve entendimento correto no acordo.
+
+\label{sec:carac}
+
+\begin{table}[]
+\centering
+\caption{Tabela de Características}
+\label{tab:carac}
+\begin{tabular}{|l|l|}
+\hline
+CH1  & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que o diretor de desenvolvimento cadastre \\ um novo funcionário\end{tabular}                                                     \\ \hline
+CH2  & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que o desenvolvedor altere suas informações\\  no sistema\end{tabular}                                                            \\ \hline
+CH3  & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que o diretor de desenvolvimento altere as \\ informações de todos os usuários.\end{tabular}                                      \\ \hline
+CH4  & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que o diretor de desenvolvimento desative \\ usuários\end{tabular}                                                                \\ \hline
+CH5  & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que os desenvolvedores visualizem suas \\ próprias informações do perfil\end{tabular}                                             \\ \hline
+CH6  & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que os diretor de desenvolvimento e Scrum \\ Masters visualizem as informações do perfil de todos os desenvolvedores\end{tabular} \\ \hline
+CH7  & O sistema deverá permitir que o diretor de desenvolvimento crie projetos                                                                                                               \\ \hline
+CH8  & \begin{tabular}[c]{@{}l@{}}O sistema deve permitir que os desenvolvedores visualizem apenas os \\ projetos em que participam\end{tabular}                                              \\ \hline
+CH9  & O sistema deverá permitir que odiretor de desenvolvimento,arquive projetos                                                                                                             \\ \hline
+CH10 & O sistema deverá permitir que o diretor de desenvolvimento                                                                                                                             \\ \hline
+CH11 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que o diretor de desenvolvimento insira usuários \\ em projetos\end{tabular}                                                      \\ \hline
+CH12 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que o diretor de desenvolvimento designe um scrum \\ master do projeto\end{tabular}                                               \\ \hline
+CH13 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que o,diretor de desenvolvimento altere o scrum \\ master do projeto\end{tabular}                                                 \\ \hline
+CH14 & O sistema deverá permitir que oscrum master cadastre tarefas nos projetos                                                                                                              \\ \hline
+CH15 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que os desenvolvedores assumam a responsabilidade \\ por uma tarefa\end{tabular}                                                  \\ \hline
+CH16 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que os desenvolvedores contribuam para a execução \\ de uma tarefa\end{tabular}                                                   \\ \hline
+CH17 & O sistema deverá exibir todos os envolvidos em uma tarefa do projeto                                                                                                                   \\ \hline
+CH18 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que os desenvolvedores,visualizem o status das tarefas \\ do projeto\end{tabular}                                                 \\ \hline
+CH19 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que os desenvolvedores alterem o status das tarefas do \\ projeto\end{tabular}                                                    \\ \hline
+CH20 & \begin{tabular}[c]{@{}l@{}}O sistema deverá permitir que os desenvolvedores do projeto,visualizem os \\ responsáveis por cada tarefa do projeto\end{tabular}                           \\ \hline
+CH21 & O sistema deverá permitir que o scrum master crie relatórios por sprint                                                                                                                \\ \hline
+CH22 & O sistema deverá permitir que o diretor de desenvolvimento aprove relatórios                                                                                                           \\ \hline
+CH23 & \begin{tabular}[c]{@{}l@{}}O sistema deve permitir a exibição das tarefas dos projetos para os usuários \\ do projeto\end{tabular}                                                     \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\caption{Tabela de Requisitos Funcionais}
+\label{tab:req-fun}
+\begin{tabular}{|l|l|}
+\hline
+RF1  & Permitir o cadastro de desenvolvedores                                                                                                                \\ \hline
+RF2  & \begin{tabular}[c]{@{}l@{}}Permitir o envio de um arquivo digital específico com as informações dos \\ desenvolvedor a serem cadastrados\end{tabular} \\ \hline
+RF3  & Permitir a edição das informações dos desenvolvedores                                                                                                 \\ \hline
+RF4  & Permitir a alteração das informações dos usuários                                                                                                     \\ \hline
+RF5  & Permitir o desativamento de usuários                                                                                                                  \\ \hline
+RF6  & Permitir o reativamento de usuários                                                                                                                   \\ \hline
+RF7  & Permitir a visualização dos perfis                                                                                                                    \\ \hline
+RF8  & Permitir a visualização das habilidades especificas dos desenvolvedores                                                                               \\ \hline
+RF9  & Permitir a visualização de horários dos desenvolvedores                                                                                               \\ \hline
+RF10 & Fornecer filtros de pesquisa para as informações dos usuários                                                                                         \\ \hline
+RF11 & Permitir a criação de projetos                                                                                                                        \\ \hline
+RF12 & Permitir a visualização das tarefas dos projetos                                                                                                      \\ \hline
+RF13 & Permitir a busca de projetos                                                                                                                          \\ \hline
+RF14 & Fornecer filtros na visualização dos projetos                                                                                                         \\ \hline
+RF15 & \begin{tabular}[c]{@{}l@{}}O sistema deve gerar automaticamente o status do projeto a partir dos \\ status das tarefas do projeto\end{tabular}        \\ \hline
+RF16 & Permitir o arquivamento de projetos.                                                                                                                  \\ \hline
+RF17 & Permitir a alteração dos dados do projeto.                                                                                                            \\ \hline
+RF18 & Reorganizar o status do projeto a partir das alterações no mesmo.                                                                                     \\ \hline
+RF19 & Permitir a inserção de usuários em projetos                                                                                                           \\ \hline
+RF20 & Permitir a escolha de um scrum master do projeto.                                                                                                     \\ \hline
+RF21 & Permitir a alteração do scrum master do projeto.                                                                                                      \\ \hline
+RF22 & Permitir o cadastro de tarefas pertencentes à um projeto                                                                                              \\ \hline
+RF23 & Permitir a atribuição de um único responsável para cada tarefa                                                                                        \\ \hline
+RF24 & Permitir a inserção dos desenvolvedores à tarefa.                                                                                                     \\ \hline
+RF25 & Exibir o responsável da tarefa                                                                                                                        \\ \hline
+RF26 & Exibir os desenvolvedores que estão executando a tarefa -26                                                                                           \\ \hline
+RF27 & Permitir a visualização do status das tarefas.                                                                                                        \\ \hline
+RF28 & Permitir a alteração do status das tarefas do projeto.                                                                                                \\ \hline
+RF29 & Permitir a visualização dos responsáveis de uma tarefa.                                                                                               \\ \hline
+RF30 & Permitir que o scrum master crie relatórios sobre cada sprint                                                                                         \\ \hline
+RF31 & Permitir que o diretor de desenvolvimento aprove o relatório                                                                                          \\ \hline
+RF32 & Permitir que o diretor de desenvolvimento rejeite o relatório                                                                                         \\ \hline
+RF33 & Permitir a exibição das tarefas dos projetos                                                                                                          \\ \hline
+RF34 & Permitir a busca por tarefas dos projetos                                                                                                             \\ \hline
+RF35 & Permitir o uso de filtros na visualização das tarefas dos projetos                                                                                    \\ \hline
+\end{tabular}
+\end{table}
