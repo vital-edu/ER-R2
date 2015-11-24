@@ -356,3 +356,100 @@ O caso de uso começa quando o diretor de desenvolvimento ou o scrum master,visu
   \item O caso de uso é encerrado
 \end{enumerate}
 
+
+\section{Regras de Negócio}
+
+\subsection{RN1}
+
+O quadro de tarefas do projeto deve exibir as tarefas organizadas de acordo com o status das tarefas:
+\begin{itemize}
+  \item To Do
+  \item Doing
+  \item Done
+\end{itemize}
+
+\subsection{RN2}
+
+As tarefas arquivadas não serão exibidas no quadro de tarefas do projeto. Estarão disponíveis em uma tela separada. [RN5]
+
+\subsection{RN3}
+
+As tarefas possuem as seguintes informações:
+
+\begin{itemize}
+  \item Nome
+  \begin{enumerate}
+    \item Formato: Texto
+    \item Tamanho mínimo: 1 caractere
+    \item Tamanho máximo: 50 caracteres
+  \end{enumerate}
+  \item Descrição
+  \begin{enumerate}
+    \item Formato: Texto
+    \item Tamanho mínimo: 1 caractere
+    \item Tamanho máximo: 50 caracteres
+  \end{enumerate}
+  \item Prioridade
+  \begin{enumerate}
+    \item Opções: Baixa, Média, Alta
+  \end{enumerate}
+  \item Status
+  \begin{enumerate}
+    \item Opções: To Do, Doing, Done
+  \end{enumerate}
+\end{itemize}
+
+\subsection{RN4}
+
+A opção de arquivar é apenas visível e acessível para o diretor de desenvolvimento.
+
+\subsection{RN5}
+
+A tela de projetos arquivados deve exibir todos os projetos ordenados pelo nome de forma ascendente, em uma lista.
+
+\subsection{RN6}
+
+A opção de criar projeto é apenas visível e acessível para o diretor de desenvolvimento.
+
+\subsection{RN7}
+
+Os projetos possuem as seguintes informações:
+
+\begin{itemize}
+  \item Nome
+  \begin{enumerate}
+    \item Formato: Texto
+    \item Tamanho mínimo: 1 caractere
+    \item Tamanho máximo: 50 caracteres
+  \end{enumerate}
+  \item Descrição
+  \begin{enumerate}
+    \item Formato: Texto
+    \item Tamanho mínimo: 1 caractere
+    \item Tamanho máximo: 50 caracteres
+  \end{enumerate}
+  \item Cliente 
+  \begin{enumerate}
+    \item Formato: Texto
+    \item Tamanho mínimo: 1 caractere
+    \item Tamanho máximo: 50 caracteres
+  \end{enumerate}
+  \item Data Inicial 
+  \begin{enumerate}
+    \item Formato: Data 
+    \item Não pode ser anterior a data inicial 
+  \end{enumerate}
+  \item Imagem 
+  \begin{enumerate}
+    \item Formato: pnj, jpg 
+  \end{enumerate}
+  \item Desenvolvedores 
+  \begin{enumerate}
+    \item Múltipla escolha: Lista de desenvolvedores da InSoft cadastrados no sistema
+  \end{enumerate}
+\end{itemize}
+
+\subsection{RN8}
+
+Sempre que uma operação não for concluída com sucesso, o sistema deve informar que a operação não foi efetuada com sucesso e retornar ao passo anterior.
+
