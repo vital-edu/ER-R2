@@ -169,37 +169,91 @@ O caso de uso começa quando o diretor de desenvolvimento acessa a tela de sele�
 
 \subsection{Fluxos Alternativos}
 
-\subsubsection{}
+\subsubsection{Desarquivar projeto}
+O caso de uso começa quando o Diretor de Desenvolvimento acessa a tela de seleção de projetos.
+
 \begin{enumerate}
-  \item
+  \item O usuário seleciona a opção visualizar projetos arquivados.
+  \item O sistema redireciona o usuário para a tela de projetos arquivados [RN5]
+  \item O usuário seleciona um projeto a ser desarquivado e clica em desarquivar.
+  \item O sistema retorna a informação de que o projeto foi desarquivado com sucesso.
+  \item O usuário é redirecionado para a tela de seleção de projetos.
+  \item O projeto desarquivado é listado junto com os outros projetos na tela.
+  \item O caso de uso é encerrado.
 \end{enumerate}
 
-\section{UC05 -}
+\subsubsection{Erro na operação de arquivamento}
+O caso de uso é iniciado após o passo 2 do fluxo principal quando o diretor de desenvolvimento confirma o arquivamento do projeto e por alguma razão a operação não é efetuada com sucesso
 
+\begin{enumerate}
+  \item O sistema retorna uma mensagem informando que não foi possível realizar a operação de arquivamento do projeto.
+  \item O fluxo retorna ao passo 1 do fluxo principal 
+\end{enumerate}
+
+\subsubsection{Erro na operação de desarquivamento}
+O caso de uso é iniciado após o passo 3 do fluxo alternativo “desarquivar projeto” quando o diretor de desenvolvimento confirma o desarquivamento do projeto e por alguma razão a operação não é efetuada com sucesso.
+
+\begin{enumerate}
+  \item O sistema retorna uma mensagem informando que não foi possível realizar a operação de desarquivamento do projeto.
+  \item O fluxo retorna ao passo 3 do fluxo principal.
+\end{enumerate}
+
+
+\section{UC05 -Criar Tarefa}
+O objetivo deste caso de uso é permitir ao desenvolvedor criar uma tarefa no sistema.
 
 \subsection{Atores}
 
 \begin{enumerate}
-  \item
+  \item Desenvolvedor
 \end{enumerate}
 
 \subsection{Pré-Condições}
 \begin{enumerate}
-  \item
+  \item Existir um projeto já cadastrado na base de dados.
+  \item Existir um usuário já cadastrado na base de dados.
 \end{enumerate}
 
 \subsection{Fluxo Principal}
+O caso de uso se inicia quando um usuário clica para criar uma tarefa em algum projeto no sistema.
+
 \begin{enumerate}
-  \item
+  \item O usuário visualiza todos os projetos do sistema.
+  \item O usuário escolhe qual dos projetos o qual ele irá criar uma tarefa.
+  \item O usuário aciona o botão “adicionar uma tarefa” na tela “Tarefas”.
+  \item O usuário é direcionado para a página de criação da tarefa.
+  \item O usuário preenche as informações necessárias sobre tal projeto
+  \item O sistema adiciona tal tarefa no banco de dados relacionando com o projeto proposto.
+  \item A tela deve ser redirecionada para os quadros do projeto com a atividade recém criada na parte “to do” (para fazer).
+  \item O caso de uso é encerrado. 
 \end{enumerate}
 
 \subsection{Fluxos Alternativos}
 
-\subsubsection{--}
+\subsubsection{Cancelar Criação de Tarefa}
 
 \begin{enumerate}
-  \item
+  \item O sistema retorna ao desenvolvedor uma caixa de diálogo perguntando se ele deseja fazer está ação de cancelamento ou não.
+  \item O desenvolvedor seleciona a opção “SIM” dentro da caixa de diálogo.
+  \item O desenvolvedor é então encaminhado pelo sistema à tela do projeto previamente escolhido.
+  \item O caso de uso é encerrado.
 \end{enumerate}
+
+\subsubsection{Preencher novamente informações para revalidar}
+
+\begin{enumerate}
+  \item O sistema retorna ao desenvolvedor a informação de que houve um erro na autenticação relacionado aos dados informados.
+  \item O fluxo retorna ao passo 4 do fluxo principal.
+\end{enumerate}
+
+\subsubsection{Tarefa Duplicada}
+
+\begin{enumerate}
+  \item Este fluxo se inicia quando no passo 5 do fluxo principal foram inseridas informações idênticas as de outra atividade (do mesmo projeto) já existente no sistema.
+  \item O sistema retorna ao desenvolvedor a informação de que a tarefa já existe no sistema para tal projeto.
+  \item O caso de uso é encerrado.
+\end{enumerate}
+
 
 \section{UC06 -}
 
