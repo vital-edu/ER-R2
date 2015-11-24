@@ -1,59 +1,325 @@
 \chapter{Especificação de Caso de Uso}
 
 
-\section{UC01 -Visualizar Projeto}
+\section{UC01 -Criar Projeto}
+
+O objetivo deste caso de uso é permitir ao diretor de desenvolvimento criar projetos dentro do sistema.
 
 \subsection{Atores}
 
+\begin{enumerate}
+  \item Diretor de desenvolvimento
+\end{enumerate}
+
 \subsection{Pré-Condições}
+
+\begin{enumerate}
+  \item O diretor de desenvolvimento deverá estar previamente logado no sistema.
+\end{enumerate}
+
+\subsection{Pós-Condição}
+
+\begin{enumerate}
+  \item Um novo projeto é criado no sistema.
+\end{enumerate}
 
 \subsection{Fluxo Principal}
 
+O caso de uso se inicia quando o diretor de desenvolvimento seleciona a opção  de criar um projeto. [RN 1]
+
+\begin{enumerate}
+  \item O diretor de desenvolvimento seleciona a opção de criar projeto.
+  \item O sistema apresenta a tela de criação de projeto para o diretor de desenvolvimento.
+  \item Dentro da tela de criação de projeto o diretor de desenvolvimento preenche as informações necessárias para criação do projeto.
+  \item O sistema retorna ao diretor de desenvolvimento a informação de que o projeto foi criado com sucesso.
+  \item O diretor de desenvolvimento é então encaminhado pelo sistema à tela dos projetos cadastrados.
+  \item O caso de uso é encerrado.
+\end{enumerate}
+
 \subsection{Fluxos Alternativos}
+
+\subsubsection{Cancelar criação de projeto}
+Este fluxo se inicia quando o diretor de desenvolvimento aciona o botão “CANCELAR” dentro da tela de criação do projeto.
+
+\begin{enumerate}
+  \item O sistema retorna ao diretor de desenvolvimento uma caixa de diálogo perguntando se ele deseja fazer está ação de cancelamento ou não.
+  \item O diretor de desenvolvimento seleciona a opção “SIM” dentro da caixa de diálogo.
+  \item O diretor de desenvolvimento é então encaminhado pelo sistema à tela de seleção de projetos.
+\end{enumerate}
+
+\subsubsection{Informações não preenchidas}
+Este fluxo se inicia quando no passo 3 do fluxo principal não foram informados todos os campos obrigatórios para criação do projeto.
+
+\begin{enumerate}
+  \item O sistema retorna ao diretor de desenvolvimento a informação de que houve um erro na autenticação relacionado aos dados informados.
+  \item O fluxo retorna ao passo 2 do fluxo principal.
+\end{enumerate}
+
+\subsubsection{Projeto existente}
+Este fluxo se inicia quando no passo 3 do fluxo principal foram inseridas informações idênticas as de outro projeto já existente no sistema. 
+
+\begin{enumerate}
+  \item O sistema retorna ao diretor de desenvolvimento a informação de que o projeto já existe no sistema.
+  \item O fluxo retorna ao passo 5 do fluxo principal.
+\end{enumerate}
 
 
 \section{UC02 -Editar Projeto}
 
+O objetivo deste caso de uso é permitir ao diretor de desenvolvimento editar os projetos dentro do sistema para atualizar informações sobre o mesmo.
+
 \subsection{Atores}
 
+\begin{enumerate}
+  \item Diretor de desenvolvimento.
+\end{enumerate}
+
 \subsection{Pré-Condições}
+\begin{enumerate}
+  \item O diretor de desenvolvimento devera estar previamente logado no sistema.
+  \item Deve existir um projeto cadastrado na base de dados do sistema.
+\end{enumerate}
+
+\subsection{Pós-Condições}
+\begin{enumerate}
+  \item As informações do projeto são atualizadas
+\end{enumerate}
 
 \subsection{Fluxo Principal}
+O caso de uso se inicia quando o diretor de desenvolvimento se encontra na tela de visualização do projeto.
+
+\begin{enumerate}
+  \item O diretor de desenvolvimento seleciona a opção de editar projeto
+  \item O sistema carrega a tela de edição do projeto com todas as informações do projeto.
+  \item Dentro da tela de edição do projeto, o diretor de desenvolvimento edita os campos de informação que deseja alterar.
+  \item O diretor de desenvolvimento aciona a opção de salvar as informações
+  \item O sistema retorna ao diretor de desenvolvimento que as informações foram alteradas com sucesso.
+  \item O diretor de desenvolvimento é encaminhado pelo sistema à tela de visualização do projeto.
+  \item O caso de uso é encerrado.
+\end{enumerate}
 
 \subsection{Fluxos Alternativos}
 
+\subsubsection{Cancelar a edição do projeto}
+Este fluxo se inicia quando o diretor de desenvolvimento aciona a opção “cancelar” dentro da tela de edição do projeto.
 
+\begin{enumerate}
+  \item O sistema retorna ao diretor de desenvolvimento uma caixa de diálogo perguntando se ele deseja fazer está ação de cancelamento ou não.
+  \item O diretor de desenvolvimento seleciona a opção “SIM” dentro da caixa de diálogo.
+  \item O diretor de desenvolvimento é então encaminhado pelo sistema à tela de visualização de projeto.
+\end{enumerate}
+
+\subsubsection{Informações preenchidas incorretamente}
+Este fluxo se inicia quando no passo 4 do fluxo principal quando o sistema identificar que campos não foram preenchidos corretamente.
+
+\begin{enumerate}
+  \item O sistema retorna ao diretor de desenvolvimento a informação de que houve um erro na validação das informações fornecidas.
+  \item O sistema exibe todos os erros de validação encontrados.
+  \item O fluxo retorna ao passo 3 do fluxo principal. 
+\end{enumerate}
 
 \section{UC03 - Visualizar Projeto}
 
+Esse caso de uso descreve como qualquer usuário usa a aplicação para exibir as atividades do Projeto.
+
 \subsection{Atores}
-\begin{itemize}
+\begin{enumerate}
   \item Usuário 
-\end{itemize}
+\end{enumerate}
 \subsection{Pré-Condições}
 
-\begin{itemize}
+\begin{enumerate}
   \item O usuário deve estar logado.
   \item Deve existir um projeto cadastrado na base de dados da aplicação. 
-\end{itemize}
+\end{enumerate}
+
+\subsection{Pós-Condições}
+\begin{enumerate}
+  \item O usuario visualiza as atividades do Projeto. 
+\end{enumerate}
 
 \subsection{Fluxo Principal}
 O caso de uso começa quando o usuário acessa a tela de seleção de projetos.
 
-\begin{itemize}
+\begin{enumerate}
   \item O usuário seleciona a opção de visualizar o quadro de tarefas de um projeto dentre os listados.
   \item O sistema retorna ao usuário o quadro de tarefas do projeto [RN1] [RN2].
   \item O caso de uso é encerrado. 
-\end{itemize}
+\end{enumerate}
 
 \subsection{Fluxos Alternativos}
 
 \subsubsection{Visualizar informações do projeto}
 Este fluxo se inicia no passo 1 do fluxo principal quando o usuário ao invés de selecionar a opção de visualizar o quadro de tarefas de um projeto, seleciona a opção de visualizar as informações de um projeto
 
-\begin{itemize}
+\begin{enumerate}
   \item O sistema retorna ao usuário as informações do sistema [RN3]
   \item O caso de uso é encerrado
-\end{itemize}
+\end{enumerate}
 
+\section{UC04 - Arquivar Projeto}
+Esse caso de Uso descreve como Diretor de Desenvolvimento usa a aplicação para arquivar um projeto existente.
+
+\subsection{Atores}
+
+\begin{enumerate}
+  \item Diretor de Desenvolvimento
+\end{enumerate}
+
+\subsection{Pré-Condições}
+\begin{enumerate}
+  \item Deve existir um projeto cadastrado na base de dados da aplicação.
+  \item Usuário logado como Diretor de Desenvolvimento.
+\end{enumerate}
+
+\subsection{Pós-Condições}
+\begin{enumerate}
+  \item O projeto é arquivado, ou seja, não pode ser visualizado na tela de seleção de projetos.
+\end{enumerate}
+
+\subsection{Fluxo Principal}
+O caso de uso começa quando o diretor de desenvolvimento acessa a tela de seleção de projetos.
+
+\begin{enumerate}
+  \item O diretor de desenvolvimento seleciona a opção de arquivar o projeto. [RN4]
+  \item O sistema retorna uma mensagem perguntando ao diretor de desenvolvimento se ele deseja concluir a operação.
+  \item O sistema retorna uma mensagem de confirmação informando que o arquivamento foi realizado com sucesso.
+  \item O diretor de desenvolvimento é redirecionado a tela de seleção de projetos.
+  \item O caso de uso é encerrado
+\end{enumerate}
+
+\subsection{Fluxos Alternativos}
+
+\subsubsection{}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\section{UC05 -}
+
+
+\subsection{Atores}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pré-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pós-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxo Principal}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxos Alternativos}
+
+\subsubsection{--}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\section{UC06 -}
+
+
+\subsection{Atores}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pré-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pós-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxo Principal}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxos Alternativos}
+
+\subsubsection{--}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\section{UC07 -}
+
+
+\subsection{Atores}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pré-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pós-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxo Principal}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxos Alternativos}
+
+\subsubsection{--}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\section{UC08 -}
+
+
+\subsection{Atores}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pré-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Pós-Condições}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxo Principal}
+\begin{enumerate}
+  \item
+\end{enumerate}
+
+\subsection{Fluxos Alternativos}
+
+\subsubsection{--}
+
+\begin{enumerate}
+  \item
+\end{enumerate}
 
