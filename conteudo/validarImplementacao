@@ -1,0 +1,7 @@
+\chapter{Validar Implementação}
+
+Após a criação da build, resultado da atividade de Gerar Build, foi validado com o cliente se os casos de uso desenvolvidos estavam de acordo com suas necessidades e expectativas. Primeiramente obtivemos o retorno de que, apesar dos casos de uso terem sido desenvolvidos de maneira a alcançar as metas impostas, foi validado que deveriamos evoluir estes casos de uso a ponto que atendesse completamente suas expectativas e necessiadades.
+
+Após a primeira validação ter sido feita, e os resultados desta não terem sido satisfatórios, voltamos para a atividade de detalhamento dos casos de uso com o objetivo de verificar a consistência do próprio detalhamento afim de encontrar e corrigir algum erro no mesmo, após ter sido novamente verificado se os casos de uso estavam inteligíveis, partimos para uma nova validação dos próprios casos de uso com o cliente, para a então passar por todas as atividades de implementação até a fase de Gerar Build, podendo assim fechar o ciclo da validação anterior e comecar uma nova.
+
+Com os casos de uso devidamente revisados e validados e tendo a nova Build criada, partimos para a validação com o cliente, que por sua vez confirmou que a implementação estava coerente com suas necessidades e alcançava suas expectativas. Portanto, após a última validação podemos avançar com as outras atividades finais de nosso processo.
