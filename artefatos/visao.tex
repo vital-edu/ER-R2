@@ -1,24 +1,12 @@
 \chapter{Documento de Visão}
 \label{sec:art-visao}
-  \section{Histórico da Revisão}
+\section{Histórico da Revisão}
 
-  \begin{table}[H]
-    \centering
-    \begin{tabular}{|l|l|l|l|}
-      \hline
-      \multicolumn{1}{|c|}{Data} & \multicolumn{1}{c|}{Vesão} & \multicolumn{1}{c|}{Descrição}     & \multicolumn{1}{c|}{Autor} \\ \hline
-      06/11/2015                & 0.1                         & Incluído posicionamento do projeto & Eduardo Vital       \\ \hline
-      06/11/2015                & 0.2                         & Incluído informação dos usuários e envolvidos & Nicolas  Oliveira
-        \\ \hline
-    \end{tabular}
-    \caption{Descrição do Problema}
-  \end{table}
+\section{Introdução}
 
-  \section{Introdução}
+A finalidade deste documento é coletar, analisar e definir necessidades e recursos de nível superior do Sistema de Gestão de Projetos de Desenvolvimento da inSoft (SGPDi). Ao longo deste documento, serão apresentados os problemas da inSoft que motivaram o desenvolvimento da solução proposta, os envolvidos e afetados pela solução, as necessidades dos envolvidos que precisam ser satisfeitas pelo sistema, a visão geral da solução, bem como seus recursos.
 
-    A finalidade deste documento é coletar, analisar e definir necessidades e recursos de nível superior do Sistema de Gerenciamento da inSoft (SGi). Ao longo deste documento, serão apresentados os problemas na inSoft que motivaram o desenvolvimento da solução proposta, os envolvidos e afetados pela solução, as necessidades dos envolvidos que precisam ser satisfeitas pelo sistema, a visão geral da solução, bem como seus recursos.
-
-    Assim, propõe-se que ao ler este documento, haverá o total entendimento sobre os motivos que levaram à proposta do desenvolvimento do SGi, bem como as funcionalidades que esse sistema irá fornecer, dfinindo-se o escopo do projeto.
+Assim, propõe-se que ao ler este documento, haverá o total entendimento sobre os motivos que levaram à proposta do desenvolvimento do SGPDi, bem como as funcionalidades que esse sistema irá fornecer, definindo-se o escopo do projeto.
 
   % \section{Referências}
 
@@ -78,23 +66,21 @@
   \section{Descrições dos Envolvidos e dos Usuários}
     \subsection{Resumo dos Envolvidos}
 
-      \begin{table}[H]
-        \centering
-        \begin{tabular}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.41\textwidth}|}
-          \hline
-          \rowcolor[HTML]{C0C0C0}
-          \multicolumn{1}{c}{Nome} & \multicolumn{1}{|c|}{Descrição} & \multicolumn{1}{|c|}{Responsabilidade} \\ \hline
-            Diretor de Gestão de Pessoas & Diretor a qual fica a cargo de gerenciar os recursos humanos da InSoft.
-                                         & Assegura que todos os contratados pela InSoft estarão com seus dados sobre horários disponíveis e habilidades específicas. \\ \hline
-            Diretor de Desenvolvimento   & Diretor a qual fica a cargo a parte de criação de protótipos e gestão de desenvolvedores para certo projeto. & Assegura que todos os envolvidos em tal projeto estão aptos a tal sistema que será feito e se possuem tempo para trabalhar no desenvolvimento. \\ \hline
-            Desenvolvedor                & Qualquer funcionário da InSoft destinado a algum projeto de desenvolvimento de software.                  & Assegura que todos seus dados estão corretos e de atualizar conforme a melhora em seu quadro de habilidades e horários. \\ \hline
-            Negociador                   & Funcionário da InSoft responsável pelo acordo com o cliente de um projeto.
-                                         & Assegura que todas as especificações iniciais estejam dentro de uma lista de habilidades que podem ser feitas pelos desenvolvedores da InSoft. \\ \hline
-            \emph{Scrum Master}          & Funcionário da InSoft responsável por um time de desenvolvimento e verificar seu andamento em relação as atividades à serem feitas.
-                                         & Assegura que o time está atendendo os prazos estipulados para cada atividade proposta no cronograma do Projeto. \\ \hline
-        \end{tabular}
-        \caption{Resumo dos envolvidos}
-      \end{table}
+     \begin{table}[]
+\centering
+\caption{Resumo dos Envolvidos}
+\label{tab:res-envolvido}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Nome                                                                    & Descrição                                                                                                                                   & Responsabilidades                                                                                                                                                                                                                                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}Diretor de Gestão \\ de Pessoas\end{tabular} & \begin{tabular}[c]{@{}l@{}}Funcionário da inSoft que \\ dirige o setor de recursos \\ humanos da InSoft.\end{tabular}                       & \begin{tabular}[c]{@{}l@{}}Assegura que todos os \\ contratados pela InSoft \\ estarão com seus dados, \\ horários de trabalho e \\ habilidades específicas \\ atualizados.\end{tabular}                                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}Diretor de \\ Desenvolvimento\end{tabular}   & \begin{tabular}[c]{@{}l@{}}Funcionário da inSoft que\\  dirige os projetos de \\ desenvolvimento da Empresa\end{tabular}                    & \begin{tabular}[c]{@{}l@{}}Assegura que todos os\\  envolvidos em tal projeto \\ estão aptos a tal sistema \\ que será\end{tabular}                                                                                                                           \\ \hline
+Desenvolvedor                                                           & \begin{tabular}[c]{@{}l@{}}Qualquer funcionário da \\ InSoft integrante de algum\\  projeto de desenvolvimento\\  de software.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Desenvolve as soluções \\ em software propostas \\ aos clientes da inSoft.\end{tabular}                                                                                                                                            \\ \hline
+Negociador                                                              & \begin{tabular}[c]{@{}l@{}}Funcionário da InSoft \\ que negocia com o cliente.\end{tabular}                                                 & \begin{tabular}[c]{@{}l@{}}Cria protótipos da solução\\  proposta, confecciona \\ e firma contratos com o \\ cliente.Documenta as \\ especificações iniciais da \\ solução em software\end{tabular}                                                           \\ \hline
+Scrum Master                                                            & \begin{tabular}[c]{@{}l@{}}Desenvolvedor que \\ coordenar um time \\ de desenvolvimento.\end{tabular}                                       & \begin{tabular}[c]{@{}l@{}}Soluciona problemas e \\ riscos que possam vir a \\ ocorrer durante o \\ desenvolvimento\\ Assegura queo time \\ está atendendo os prazos \\ estipulados para cada \\ atividade proposta no \\ cronograma do Projeto.\end{tabular} \\ \hline
+\end{tabular}
+\end{table} 
 
     \subsection{Resumo dos Usuários}
 
@@ -155,6 +141,28 @@
 
       A fim de resolver esses problemas, a inSoft espera que o SGi possibilite, de forma centralizada, o controle sobre as informações dos funcionários, a disponibilidades dos mesmos; a organização dos projetos de desenvolvimento e suas atividades; e a possibilidade de conseguir alocar facilmente funcionários para um determinado projeto e atividade sem causar conflitos de disponibilidade de horários.
 
+\begin{table}[]
+\centering
+\label{tab:nec-prob}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Necessidade                                                                                                                                  & Prioridade & Preocupações                                                                                                                                                                         & Solução Atual                                                                                                                                            & Soluções Propostas                                                                                                                                                                          \\ \hline
+\begin{tabular}[c]{@{}l@{}}Permitir o \\ gerenciamento \\ de funcionários\end{tabular}                                                       & Média      & \begin{tabular}[c]{@{}l@{}}Limitar o \\ acesso \\ dos funcionários \\ aos projetos dos\\  quais participam\end{tabular}                                                              & \begin{tabular}[c]{@{}l@{}}Os funcionários \\ são gerenciados \\ pela equipe de \\ RH através de \\ planilhas \\ eletrônicas\end{tabular}                & \begin{tabular}[c]{@{}l@{}}Transferência das \\ informações dos \\ funcionários \\ mantidas em \\ planilhas eletrônicas \\ para o sistema, \\ permitindo um \\ melhor controle\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Visualizar as \\ habilidades \\ técnicas \\ e os horários \\ disponíveis de \\ cada \\ desenvolvedor\end{tabular} & Alta       & \begin{tabular}[c]{@{}l@{}}Não há um \\ controle \\ eficiente\\ sobre as \\ habilidades\\ técnicas e os \\ horários de \\ trabalho\\ são \\ monitorados\\ informalmente\end{tabular} & \begin{tabular}[c]{@{}l@{}}Gerenciamento \\ das habilidades é \\ feito através de \\ planilhas \\ eletrônicas\\ disponibilizadas \\ pelo RH\end{tabular} & \begin{tabular}[c]{@{}l@{}}Acesso \\ on-line aos \\ horários de \\ trabalho \\ para \\ visualização e \\ atualização \\ simplificada\end{tabular}                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}Permitir o \\ gerenciamento \\ de \\ múltiplos \\ projetos\end{tabular}                                           & Média      & \begin{tabular}[c]{@{}l@{}}Falta de \\ visibilidade\\  dos projetos \\ em andamento\end{tabular}                                                                                     & \begin{tabular}[c]{@{}l@{}}Os projetos \\ são\\  gerenciados \\ através\\  de um kanban \\ online (Trello)\end{tabular}                                  & \begin{tabular}[c]{@{}l@{}}Disponibilização \\ de \\ lista de \\ projetos \\ criados\end{tabular}                                                                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}Gerenciar \\ tarefas \\ de \\ desenvolvimento \\ de cada projeto\end{tabular}                                     & Média      & \begin{tabular}[c]{@{}l@{}}Pouca \\ visibilidade \\ das atividades \\ desempenhadas \\ por cada \\ desenvolvedor\end{tabular}                                                        & \begin{tabular}[c]{@{}l@{}}As atividades \\ sãogerenciadas \\ através \\ de um kanban \\ online (Trello)\end{tabular}                                    & \begin{tabular}[c]{@{}l@{}}Informação \\ sobre \\ todas as \\ tarefas \\ executadas \\ pelo \\ desenvolvedor\end{tabular}                                                                   \\ \hline
+\end{tabular}
+\caption{Tabela de Necessidades}
+\end{table}
+
+\subsubsection{Prioridade}
+\begin{itemize}
+  \item Alta: essa necessidade é fundamental à resolução do problema.
+  \item Média: essa necessidade é importante, porém a empresa já possui paliativos.
+  \item Baixa: essa necessidade não é prioritária, mas agrega valor ao usuário.
+\end{itemize}
+
     \subsection{Alternativas e Concorrência}
        \label{subsec:Concorrentes}
       \begin{table}[H]
@@ -179,6 +187,16 @@
               & Consegue unir a parte de cadastro de clientes, junto com uma área de modelo de processo, assim podendo resolver dois problemas em um.
               & Pago;
                 Criado originalmente para CRM (Customer Relationship Management), ferramenta não atrelada com a função base a qual seria inserida na InSoft, podendo assim causar certas inconsistências. \\ \hline
+            Github
+            +
+            Zenhub
+              & Visibilidade de tarefas, status da tarefa e responsável pela 
+                tarefa. Ainda auxilia o GCS da empresa.
+              & Fica semelhante ao Trello. Tem a grande vantagem de unir 
+                visibilidade de código e controle de mudanças à gerência de 
+                tarefas, responsabilidades e issues.
+              & Funciona somente no chrome. Não atende as necessidades de 
+                habilidades técnicas e de horários disponíveis dos membros. \\ \hline
         \end{tabular}
         \caption{Alternativas e concorrência}
       \end{table}
@@ -187,10 +205,94 @@
 
     \subsection{Perspectiva do Produto}
 
-      Dado que esse produto tem como meta resolver os problemas de falta de controle dos processos, referentes a área de desenvolvimento dentro da empresa inSoft, fornecendo um meio de facilitar e organizar a visibilidade desses processos. Funciona como uma ferramenta de gestão para manter e registrar as informações referentes a disponibilidade de horários e habilidades especificas de cada membro da empresa e alocá-los às suas devidas tarefas e atividades, nas quais são mais justas de acordo com suas informações registradas na ferramenta.
-
+      O SGPDi tem como meta resolver os problemas de falta de controle dos processos, referentes a área de desenvolvimento dentro da empresa inSoft, fornecendo um meio de facilitar e organizar a visibilidade desses processos. Funciona como uma ferramenta de gestão para manter e registrar as informações referentes a disponibilidade de horários e habilidades especificas de cada membro da empresa e alocá-los às suas devidas tarefas e atividades, nas quais são mais justas de acordo com suas informações registradas na ferramenta.
+      
       Como já foi citado, essa ferramenta provê uma melhor visibilidade do processo afim de servir como meio de auxílio da parte de gestão da empresa, que além de se evitar possíveis falhas no controle do processo, aumentaria a eficiência e consequentemente a produtividade dentro dos processos da empresa.
 
+
     \subsection{Suposições e Dependências}
+        
+    \begin{table}[H]
+    \centering
+    \caption{Fatores e Motivos para mudança}
+    \label{tab:fatores}
+    \begin{tabular}{|l|l|}
+    \hline
+    \rowcolor[HTML]{C0C0C0} 
+    Fator                                                                                                                                                                       & Motivos plausíveis para mudança                                                                                                                                                                                                                                                                                                                                                              \\ \hline
+    \begin{tabular}[c]{@{}l@{}}A solução deve ser \\ desenvolvida para \\ ser uma aplicação \\ Web.\end{tabular}                                                                & \begin{tabular}[c]{@{}l@{}}Até o presente momento todas as ideias se adequam a uma \\ solução web,já que seria de fácil acesso a todos os \\ membros (que poderão ser usuários do sistema) pela \\ InSoft. Caso não seja possível encontrar um servidor para\\  ser utilizado como host o visão deverá ser alterado.\end{tabular}                                                            \\ \hline
+    \begin{tabular}[c]{@{}l@{}}InSoft aderir ao \\ uso de algum outro \\ software concorrente \\ que seja capaz de \\ resolver um dos \\ problemas \\ encontrados.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Até o momento vários problemas foram encontrados para \\ serem abordados pelo software em questão. A InSoft \\ não se pronunciou de usar algum software concorrente \\ para suprir algumas das necessidades que ajudem \\ a realizar este problema, caso cheguem a aderir o visão \\ deverá ser alterado possuindo um escopo com fronteira \\ menor.\end{tabular} \\ \hline
+    \end{tabular}
+    \end{table}
+
   \section{Recursos do Produto}
+
+  \subsection{Requisitos Funcionais}
+
+  \begin{table}[]
+\centering
+\caption{Tabela de Requisitos Funcionais}
+\label{tab:req-fun-vis}
+\begin{tabular}{|l|l|}
+\hline
+RF1  & Permitir o cadastro de desenvolvedores                                                                                                                \\ \hline
+RF2  & \begin{tabular}[c]{@{}l@{}}Permitir o envio de um arquivo digital específico com as informações dos \\ desenvolvedor a serem cadastrados\end{tabular} \\ \hline
+RF3  & Permitir a edição das informações dos desenvolvedores                                                                                                 \\ \hline
+RF4  & Permitir a alteração das informações dos usuários                                                                                                     \\ \hline
+RF5  & Permitir o desativamento de usuários                                                                                                                  \\ \hline
+RF6  & Permitir o reativamento de usuários                                                                                                                   \\ \hline
+RF7  & Permitir a visualização dos perfis                                                                                                                    \\ \hline
+RF8  & Permitir a visualização das habilidades especificas dos desenvolvedores                                                                               \\ \hline
+RF9  & Permitir a visualização de horários dos desenvolvedores                                                                                               \\ \hline
+RF10 & Fornecer filtros de pesquisa para as informações dos usuários                                                                                         \\ \hline
+RF11 & Permitir a criação de projetos                                                                                                                        \\ \hline
+RF12 & Permitir a visualização das tarefas dos projetos                                                                                                      \\ \hline
+RF13 & Permitir a busca de projetos                                                                                                                          \\ \hline
+RF14 & Fornecer filtros na visualização dos projetos                                                                                                         \\ \hline
+RF15 & \begin{tabular}[c]{@{}l@{}}O sistema deve gerar automaticamente o status do projeto a partir dos \\ status das tarefas do projeto\end{tabular}        \\ \hline
+RF16 & Permitir o arquivamento de projetos.                                                                                                                  \\ \hline
+RF17 & Permitir a alteração dos dados do projeto.                                                                                                            \\ \hline
+RF18 & Reorganizar o status do projeto a partir das alterações no mesmo.                                                                                     \\ \hline
+RF19 & Permitir a inserção de usuários em projetos                                                                                                           \\ \hline
+RF20 & Permitir a escolha de um scrum master do projeto.                                                                                                     \\ \hline
+RF21 & Permitir a alteração do scrum master do projeto.                                                                                                      \\ \hline
+RF22 & Permitir o cadastro de tarefas pertencentes à um projeto                                                                                              \\ \hline
+RF23 & Permitir a atribuição de um único responsável para cada tarefa                                                                                        \\ \hline
+RF24 & Permitir a inserção dos desenvolvedores à tarefa.                                                                                                     \\ \hline
+RF25 & Exibir o responsável da tarefa                                                                                                                        \\ \hline
+RF26 & Exibir os desenvolvedores que estão executando a tarefa -26                                                                                           \\ \hline
+RF27 & Permitir a visualização do status das tarefas.                                                                                                        \\ \hline
+RF28 & Permitir a alteração do status das tarefas do projeto.                                                                                                \\ \hline
+RF29 & Permitir a visualização dos responsáveis de uma tarefa.                                                                                               \\ \hline
+RF30 & Permitir que o scrum master crie relatórios sobre cada sprint                                                                                         \\ \hline
+RF31 & Permitir que o diretor de desenvolvimento aprove o relatório                                                                                          \\ \hline
+RF32 & Permitir que o diretor de desenvolvimento rejeite o relatório                                                                                         \\ \hline
+RF33 & Permitir a exibição das tarefas dos projetos                                                                                                          \\ \hline
+RF34 & Permitir a busca por tarefas dos projetos                                                                                                             \\ \hline
+RF35 & Permitir o uso de filtros na visualização das tarefas dos projetos                                                                                    \\ \hline
+\end{tabular}
+\end{table}
+
+ \subsection{Requisitos Não-Funcionais}
+
+\begin{table}[]
+\centering
+\label{tab:req-n-fun-vis}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+ID    & Tipo            & Característica         & Descrição                                                                                                                                            \\ \hline
+RNF01 & Usabilidade     & Erros                  & \begin{tabular}[c]{@{}l@{}}O sistema deve exibir mensagens de\\  erros claras e informativas\end{tabular}                                            \\ \hline
+RNF02 & Usabilidade     & Interface de Usuário   & \begin{tabular}[c]{@{}l@{}}O sistema deve possuir uma interface\\  de usuário organizada e clara\end{tabular}                                        \\ \hline
+RNF03 & Usabilidade     & Memorização            & \begin{tabular}[c]{@{}l@{}}O sistema possuirá elementos visuais \\ que facilitem a reutilização do sistema.\end{tabular}                             \\ \hline
+RNF04 & Suportabilidade & Responsividade         & \begin{tabular}[c]{@{}l@{}}O sistema deve se ajustar a diferentes\\  tamanhos e resoluções de tela\end{tabular}                                      \\ \hline
+RNF05 & Suportabilidade & Portabilidade          & \begin{tabular}[c]{@{}l@{}}O sistema deve estar acessível em \\ todos os navegadores de internet.\end{tabular}                                       \\ \hline
+RNF06 & Confiabilidade  & Funcionamento          & \begin{tabular}[c]{@{}l@{}}O sistema deve ter disponibilidade de\\  98\% do tempo\end{tabular}                                                       \\ \hline
+RNF07 & Performance     & Capacidade de usuários & \begin{tabular}[c]{@{}l@{}}O sistema deve permitir 100 usuários\\  simultâneos\end{tabular}                                                          \\ \hline
+RNF08 & Performance     & Tempo de resposta      & \begin{tabular}[c]{@{}l@{}}O sistema deve responder a uma \\ requisição em menos de 0,5 segundo\end{tabular}                                         \\ \hline
+RNF09 & Performance     & Leitura de dados       & \begin{tabular}[c]{@{}l@{}}O sistema deve reconhecer arquivos\\  com extensão .XML\end{tabular}                                                      \\ \hline
+RNF10 & Segurança       & Acesso                 & \begin{tabular}[c]{@{}l@{}}O sistema deve restringir certas funções\\  de acordo com os níveis de permissões\\  de acessos dos usuários\end{tabular} \\ \hline
+\end{tabular}
+\caption{Requisitos Não-Funcionais}
+\end{table}
   \section{Outros Requisitos do Produto}
